@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>so sanh voi 0</title>
+</head>
+<body>
+<input style="width: 250px" id="num" type="text" placeholder="Enter number to compare with 0 ">
+<br><br>
+<button type="button" onclick="compare()">Check</button>
+<br>
+<h3 id="result">Show result</h3>
+<script>
+    function compare() {
+        let nuBer =parseInt(document.getElementById("num").value);
+        if (nuBer > 0) {
+            document.getElementById("result").innerHTML = nuBer + " Greater 0"
+        } else {
+            document.getElementById("result").innerHTML = nuBer + " less than 0"
+        }
+    }
+</script>
+</body>
+</html>
