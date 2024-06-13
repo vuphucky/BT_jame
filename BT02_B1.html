@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Độ C sang F</title>
+</head>
+<body>
+<input id="doC" type="number" placeholder="Nhập dộ C">
+<button type="button" onclick="chanF()">Đổi sang độ F</button>
+<br>
+<h3 id="result">Nhiệt độ F</h3>
+<script>
+    function chanF(){
+        let doC = parseFloat(document.getElementById("doC").value);
+        let doF = doC * (9/5) + 32
+        document.getElementById("result").innerHTML = "Nhiệt độ F: " + doF +"F"
+    }
+</script>
+</body>
+</html>
