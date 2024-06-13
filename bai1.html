@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xer chia het</title>
+</head>
+<body>
+<input type="text" placeholder="Nhập số chia" id="sochia">
+<input type="text" placeholder="Nhập số bị chia" id="sobichia">
+<button onclick="chia()">thực hiện phép chia</button>
+<script>
+    function chia() {
+        let a = parseInt( document.getElementById("sochia").value);
+        let b = parseInt( document.getElementById("sobichia").value);
+        if (a % b == 0) {
+            alert("Số  " + a+ " chia hết cho " + b)
+        } else {
+            alert("Số  " + a + " không chia hết " + b)
+        }
+    }
+</script>
+</body>
+</html>
