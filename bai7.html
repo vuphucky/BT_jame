@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cước điện thoại</title>
+</head>
+<body>
+<h1>CƯỚC PHÍ ĐIỆN THOẠI THÁNG NÀY</h1>
+<br>
+<input id="minCall" type="text" placeholder="Só phút gọi tháng này">
+<button type="button" onclick="getM()">Tính tiền</button>
+<br> <br>
+<h3 id="result">Số tiền phải trả</h3>
+<script>
+    function getM() {
+        let minCall = parseInt(document.getElementById("minCall").value);
+        let maxMin = minCall * 5000
+        let aveMin = minCall * 3000
+        let minMin = minCall * 1000
+        if(minCall >= 20) {
+            document.getElementById("result").innerHTML = "Số tiền cước phải trả: " + maxMin + " VND"
+        } else if (minCall >= 8) {
+            document.getElementById("result").innerHTML = "Số tiền cước phải trả: " + aveMin + " VND"
+        }  else {
+            document.getElementById("result").innerHTML = "Số tiền cước phải trả: " + minMin + " VND"
+        }
+
+    }
+</script>
+</body>
+</html>
