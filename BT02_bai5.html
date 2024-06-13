@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dien tich tam giac vuong</title>
+</head>
+<body>
+<h1>Tính diện tích tam giác vuông</h1>
+<input type="text" placeholder="cạnh a" id="cA">
+<input type="text" placeholder="cạnh b" id="cb"> <br> <br>
+<button type="button" onclick="findS()">Tính S </button>
+<br>
+<h3>S tam giác vuông = <span id="result"></span></h3>
+<script>
+    function findS() {
+        let cA = document.getElementById("cA").value;
+        let cB = document.getElementById("cb").value;
+        let finS = (cA * cB) / 2
+        if(cA/cA === 1 && cB/cB === 1) {
+            document.getElementById("result").innerHTML = finS
+        } else {
+            alert("vui lòng nhập số!")
+        }
+    }
+</script>
+</body>
+</html>
