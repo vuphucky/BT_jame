@@ -12,22 +12,24 @@
         <br>
         Nhập chiều cao: (m) <input  type="text" id="met">
         <br> <br>
-        <button type="button" onclick="test()">Kiểm Tra</button>
+        <button type="button" onclick="getBmi()">Kiểm Tra</button>
+        <br>
+        <h3 id="result">Kết quả hiển thị </h3>
     </fieldset>
 </form>
 <script>
-    function test(){
+    function getBmi(){
         let klg = parseFloat( document.getElementById('kilo').value);
         let met = parseFloat( document.getElementById('met').value);
         let bmi = klg/(met**2)
         if (bmi >= 30.0){
-            document.write(" Chúc mừng bạn đã bị béo phì!")
-        } else if(30>bmi>=25.0){
+            document.getElementById("result").innerHTML = " Chúc mừng bạn đã bị béo phì!"
+        } else if(bmi>=25.0){
             document.write("Bạn bị chubby!")
-        } else if(25>bmi>=18.5) {
-            document.write(" Bạn siêu cân đối, body rất đẹp!")
+        } else if(bmi>=18.5) {
+            document.getElementById("result").innerHTML = " Bạn siêu cân đối, body rất đẹp!"
         } else {
-            document.write("Bạn bị còi xương thiếu cân rồi :( !")
+            document.getElementById("result").innerHTML = "Bạn bị còi xương thiếu cân rồi :( !"
         }
     }
 </script>
