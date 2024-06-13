@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính hoa hồng</title>
+</head>
+<body>
+<form action="" method="get">
+    <fieldset>
+        <legend><h1>Hoa hồng tháng này</h1></legend>
+     Doanh thu tháng này: <input id="DT" type="text" placeholder="VND"> <br>
+        <br>
+        <button type="button" onclick="getmoney()"> Tính hoa hồng</button> <h3 id="result">Số tiền hoa hồng</h3>
+    </fieldset>
+</form>
+<script>
+    function getmoney() {
+        let income =parseInt(document.getElementById("DT").value);
+        let maxTip = income*(40/100)
+        let aveTip = income*(20/100)
+        let minTip = income*(10/100)
+        if (income >= 70000000) {
+            document.getElementById("result").innerHTML = maxTip + " VND"
+        } else if(income >= 30000000) {
+            document.getElementById("result").innerHTML = aveTip + " VND"
+        } else if (income >= 20000000) {
+            document.getElementById("result").innerHTML = minTip + "VND"
+        } else {
+            document.getElementById("result").innerHTML = "0 VND"
+        }
+    }
+</script>
+</body>
+</html>
