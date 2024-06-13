@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phương trình bậc 1</title>
+</head>
+<body>
+<input type="text" placeholder="Nhập số thứ nhất" id="numOne">
+<input type="text" placeholder="Nhập số thứ 2" id="numTwo">
+<input type="text" placeholder="Nhập số thứ 3" id="numThr">
+<br> <br>
+<button type="button" onclick="finD()">Tính phương trình bậc 1</button>
+<br>
+<h3>Nghiệm phương trình bậc 1 của 3 số trên = <span id="result"></span></h3>
+<script>
+    function finD() {
+        let numOn = document.getElementById("numOne").value;
+        let numTwo = document.getElementById("numTwo").value;
+        let numThr = document.getElementById("numThr").value;
+        let getD = (numThr - numTwo) / numOn
+        if (numThr/numThr === 1 && numTwo/numTwo === 1 && numOn/numOn === 1) {
+            document.getElementById("result").innerHTML = getD
+        } else {
+            alert("vui lòng nhâp số!")
+        }
+    }
+</script>
+</body>
+</html>
