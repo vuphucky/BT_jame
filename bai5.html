@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xếp hạng học lực</title>
+</head>
+<body>
+<form action="" method="get">
+    <fieldset>
+        <legend><h1>Xếp loại kết quả</h1></legend>
+<input id="KT" type="text" placeholder="Nhập điểm bài kiểm tra"/><br>
+<input id="GK" type="text" placeholder="Nhập điểm thi giữa kỳ"><br>
+<input id="CK" type="text" placeholder="Nhập điểm thi cuối kỳ">
+<br> <br>
+<button type="button" onclick="getPoint()">Kiểm tra học lực</button>
+<br>
+<h3 id="result"></h3>
+    </fieldset>
+</form>
+<script>
+    function getPoint() {
+        let pointKt = parseFloat(document.getElementById("KT").value);
+        let pointGk = parseFloat(document.getElementById("GK").value);
+        let pointCk = parseFloat(document.getElementById("CK").value);
+        let pointAll = (pointKt + pointGk + pointCk) / 3
+        if (pointAll >= 9 ) {
+            document.getElementById("result").innerHTML = "Học sinh xuất sắc"
+        } else if (pointAll >= 8) {
+            document.getElementById("result").innerHTML = "Học sinh giỏi"
+        } else if (pointAll >= 7) {
+            document.getElementById("result").innerHTML = "Học sinh khá"
+        } else {
+            document.getElementById("result").innerHTML = "Học sinh trung bình"
+        }
+    }
+</script>
+</body>
+</html>
