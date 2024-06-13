@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiemtra Age</title>
+</head>
+<body>
+<script>
+    let age =+prompt("nhập số tuổi");
+    let int = age - parseFloat(age)
+    if (isNaN(age)) {
+        alert(" vui lòng nhập số");
+    } else if(120 > age && age > 0 && int !==0 ) {
+        alert("Đây là tuổi của 1 người")
+    } else {
+        alert("Đây không phải số tuổi con người")
+    }
+</script>
+</body>
+</html>
