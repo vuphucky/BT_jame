@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>S hinh vuong</title>
+</head>
+<body>
+<h1>Tính diện tích hình vuông</h1>
+<input id="canhV" type="text" placeholder="Cạnh Vuông">
+<button type="button" onclick="getS()">Tính S</button>
+<br>
+<h3 id="result">Diện tích hình vuông:</h3>
+<script>
+    function getS() {
+        let cv = parseFloat(document.getElementById("canhV").value);
+        let sv = cv**2
+        document.getElementById("result").innerHTML = "S = " + sv
+    }
+</script>
+</body>
+</html>
