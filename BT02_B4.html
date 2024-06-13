@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>S chu nhat</title>
+</head>
+<body>
+<h1>Tính diện tích hình chữ nhật</h1>
+<br>
+<input id="cd" type="text" placeholder="Chiều dài">
+<input id="cr" type="text" placeholder="Chiều rộng">
+<br> <br>
+<button type="button" onclick="cnS()">Tính S</button>
+<br>
+<h3 id="result"></h3>
+<script>
+    function cnS() {
+        let cD = parseFloat(document.getElementById("cd").value);
+        let cR = parseFloat(document.getElementById("cr").value)
+        let S = cD*cR
+        document.getElementById("result").innerHTML = "S Chữ nhật = " + S
+    }
+</script>
+</body>
+</html>
