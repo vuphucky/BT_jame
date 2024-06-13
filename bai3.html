@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Find NumMAx</title>
+</head>
+<body>
+<input type="text" placeholder="Enter number" id="numOne">
+<input type="text" placeholder="Enter number" id="numTwo">
+<input type="text" placeholder="Enter number" id="numThree">
+<br><br>
+<button type="button" onclick="finMax()">Find Max Number</button>
+<br>
+<h3 id="result">The number max is:.... </h3>
+<script>
+    function finMax() {
+        let numO = document.getElementById("numOne").value
+        let numTw = document.getElementById("numTwo").value
+        let numThr = document.getElementById("numThree").value
+        if (max = numO) {
+            if (numTw >= max) {
+                max = numTw
+                if (numThr >= max) {
+                    max = numThr
+                }
+            }
+            document.getElementById("result").innerHTML = "Max number is: " + max
+        }
+    }
+
+</script>
+</body>
+</html>
